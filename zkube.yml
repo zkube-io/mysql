@@ -1,1 +1,13 @@
+apiVersion: 0.01
+type: Image
+name: https://github.com/zkube-io/mysql
+suggestedSlug: mysql
+dockerImage: mysql:latest
+volumeMounts:
+  - mountPath: "/var/lib/mysql"
+env:
+  - name: MYSQL_ROOT_PASSWORD
+    type: passwd
+    required: true
+port: 3306
 
